@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Премиум курсы по программированию на Pascal. Изучайте основы и алгоритмы.">
+    <title>Освой Pascal | PascalPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Pascal<span>Pro</span></div>
+        <nav style="display: flex; align-items: center;">
+            <a href="#about_pascal" data-i18n="nav_about">О языке</a>
+            <a href="#courses" data-i18n="nav_courses">Курсы и цены</a>
+            <select id="lang-switcher" onchange="changeLanguage(this.value)" class="lang-select">
+                <option value="ru">🇷🇺 RU</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="fr">🇫🇷 FR</option>
+                <option value="de">🇩🇪 DE</option>
+                <option value="it">🇮🇹 IT</option>
+                <option value="pt">🇵🇹 PT</option>
+                <option value="zh">🇨🇳 ZH</option>
+                <option value="ja">🇯🇵 JA</option>
+                <option value="ar">🇸🇦 AR</option>
+            </select>
+            <button class="btn-auth" onclick="openAuthModal('login')" data-i18n="nav_login">Войти</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1 class="animate-up" data-i18n="hero_title">Открой мир IT с <span class="gradient-text">Pascal</span></h1>
+            <p class="animate-up delay-1" data-i18n="hero_sub">Заложи идеальный фундамент для программирования. Изучай алгоритмы, развивай логику и готовься к олимпиадам с нашими премиум курсами.</p>
+            <a href="#courses" class="btn primary animate-up delay-2" data-i18n="hero_btn">Выбрать курс</a>
+        </div>
+        <div class="hero-image animate-fade-in">
+            <img src="hero_bg_pascal.png" alt="Pascal Code Illustration">
+        </div>
+    </section>
+
+    <section id="about_pascal" class="about-pascal">
+        <h2 class="section-title" data-i18n="about_title">Почему именно Pascal?</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p data-i18n="about_p1"><strong>Pascal</strong> — это классический язык программирования, созданный Никлаусом Виртом специально для обучения. Он приучает писать чистый, строгий и максимально структурированный код.</p>
+                <p data-i18n="about_p2">Несмотря на появление новых технологий, Pascal остается <strong>идеальной базой</strong>. Освоив алгоритмы, переменные и циклы здесь, вы с легкостью перейдете на Python, C++ или Java.</p>
+                <ul class="pascal-features">
+                    <li data-i18n="feat_1"><span class="highlight">Строгая типизация:</span> компилятор не даст вам совершить неочевидные ошибки новичка.</li>
+                    <li data-i18n="feat_2"><span class="highlight">Читаемость:</span> красивый синтаксис, который читается почти как английский текст.</li>
+                    <li data-i18n="feat_3"><span class="highlight">Олимпиады:</span> превосходный выбор для старта в спортивном программировании и сдаче экзаменов.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <h2 class="section-title" data-i18n="courses_title">Программы обучения</h2>
+        <div class="cards-container">
+            <!-- Course 1 -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="new_course1.png" alt="Основы Pascal" class="card-img">
+                </div>
+                <h3 data-i18n="c1_title">Базовый старт</h3>
+                <p data-i18n="c1_desc">Идеально для школьников и новичков. Изучим синтаксис, переменные, ветвления и циклы с нуля.</p>
+                <div class="price">49$</div>
+                <div class="price-rub">≈ 4 900 ₽</div>
+                <button class="btn secondary full-width" data-i18n="btn_enroll">Записаться</button>
+            </div>
+            <!-- Course 2 -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="new_course2.png" alt="Алгоритмы PRO" class="card-img">
+                </div>
+                <h3 data-i18n="c2_title">Алгоритмы PRO</h3>
+                <p data-i18n="c2_desc">Продвинутые структуры данных, массивы, функции и указатели. Мощная подготовка к олимпиадам.</p>
+                <div class="price">99$</div>
+                <div class="price-rub">≈ 9 900 ₽</div>
+                <button class="btn secondary full-width" data-i18n="btn_enroll">Записаться</button>
+            </div>
+            <!-- Course 3 VIP -->
+            <div class="card highlight">
+                <div class="card-img-wrapper">
+                    <img src="mentor_course_img.png" alt="Личное наставничество" class="card-img">
+                </div>
+                <h3 data-i18n="c3_title">Личный ментор</h3>
+                <p data-i18n="c3_desc">Индивидуальные занятия с разбором сложнейших задач. Гарантированный результат. Эксклюзив.</p>
+                <div class="price">190$</div>
+                <div class="price-rub">≈ 19 000 ₽</div>
+                <button class="btn primary full-width" data-i18n="btn_hit">Выбрать (Хит!)</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PascalPro. Все права защищены. <br><span style="font-size:14px; opacity:0.5;">Сделано с любовью для идеального старта 🚀</span></p>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <div id="g_id_onload"
+                 data-client_id="1089062381510-l1naiean8vugjrothda9oq51c454h53v.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse"
+                 data-auto_prompt="false">
+            </div>
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchAuthTab('login')" data-i18n="modal_login_tab">Вход</button>
+                <button class="tab-btn" onclick="switchAuthTab('register')" data-i18n="modal_reg_tab">Регистрация</button>
+            </div>
+            
+            <div id="login-form" class="auth-form active">
+                <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                    <div class="g_id_signin"
+                         data-type="standard"
+                         data-shape="pill"
+                         data-theme="outline"
+                         data-text="signin_with"
+                         data-size="large"
+                         data-logo_alignment="left">
+                    </div>
+                </div>
+                <div class="divider"><span data-i18n="modal_or">или</span></div>
+                <input type="email" placeholder="Email" class="auth-input" data-i18n-ph="placeholder_email">
+                <input type="password" placeholder="Пароль" class="auth-input" data-i18n-ph="placeholder_pass">
+                <button class="btn primary full-width" data-i18n="btn_login">Войти</button>
+            </div>
+
+            <div id="register-form" class="auth-form">
+                <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                    <div class="g_id_signin"
+                         data-type="standard"
+                         data-shape="pill"
+                         data-theme="outline"
+                         data-text="signup_with"
+                         data-size="large"
+                         data-logo_alignment="left">
+                    </div>
+                </div>
+                <div class="divider"><span data-i18n="modal_or">или</span></div>
+                <input type="text" placeholder="Имя" class="auth-input" data-i18n-ph="placeholder_name">
+                <input type="email" placeholder="Email" class="auth-input" data-i18n-ph="placeholder_email">
+                <input type="password" placeholder="Пароль" class="auth-input" data-i18n-ph="placeholder_pass">
+                <button class="btn primary full-width" data-i18n="btn_reg">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProfileModal()">&times;</span>
+            <h2 style="margin-bottom: 20px; font-size: 28px;" data-i18n="prof_title">Мой профиль</h2>
+            
+            <div class="profile-info" style="display: flex; align-items: center; margin-bottom: 30px; gap: 20px;">
+                <img id="profile-avatar" src="" style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--primary); object-fit: cover;">
+                <div>
+                    <h3 id="profile-name" style="margin-bottom: 5px; font-size: 22px;">Имя</h3>
+                    <p id="profile-email" style="color: var(--text-muted); font-size: 15px;">email</p>
+                </div>
+            </div>
+
+            <label style="display: block; margin-bottom: 10px; font-size: 15px; color: var(--text-muted); font-weight: 600;" data-i18n="prof_about">Рассказать о себе</label>
+            <textarea placeholder="Расскажите о вашем опыте в программировании и целях..." class="auth-input" style="height: 120px; resize: none; font-family: inherit;" data-i18n-ph="prof_about_ph"></textarea>
+
+            <label style="display: block; margin-bottom: 10px; font-size: 15px; color: var(--text-muted); font-weight: 600;" data-i18n="prof_phone">Номер телефона (для безопасности)</label>
+            <input type="tel" placeholder="+7 (999) 000-00-00" class="auth-input">
+
+            <button class="btn primary full-width" style="margin-top: 15px; padding: 12px 0; border:none;" onclick="showToast('Профиль успешно сохранен! ✅')" data-i18n="btn_save">Сохранить изменения</button>
+            <button class="btn secondary full-width" style="margin-top: 15px; border-color: rgba(255, 74, 74, 0.4); color: #ff4a4a; padding: 12px 0;" onclick="logout()" data-i18n="btn_logout">Выйти из аккаунта</button>
+        </div>
+    </div>
+
+    <script>
+        let currentUser = null;
+
+        // Auth Modal Logic
+        function openAuthModal(tab) {
+            document.getElementById('auth-modal').classList.add('open');
+            switchAuthTab(tab);
+        }
+
+        function closeAuthModal() {
+            document.getElementById('auth-modal').classList.remove('open');
+        }
+
+        function handleCredentialResponse(response) {
+            const base64Url = response.credential.split('.')[1];
+            let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            while (base64.length % 4) { base64 += '='; }
+            
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            
+            currentUser = JSON.parse(jsonPayload);
+            
+            const authBtn = document.querySelector('.btn-auth');
+            authBtn.innerHTML = `<img src="${currentUser.picture}" style="width:22px; height:22px; border-radius:50%; vertical-align:middle; margin-right:8px; border: 1px solid var(--primary);"> ${currentUser.given_name}`;
+            authBtn.onclick = openProfileModal;
+            
+            document.getElementById('profile-avatar').src = currentUser.picture;
+            document.getElementById('profile-name').textContent = currentUser.name;
+            document.getElementById('profile-email').textContent = currentUser.email;
+
+            closeAuthModal();
+            showToast(`Добро пожаловать, <b>${currentUser.name}</b>! Ваш профиль активирован. 🚀`);
+        }
+
+        function openProfileModal() {
+            document.getElementById('profile-modal').classList.add('open');
+        }
+
+        function closeProfileModal() {
+            document.getElementById('profile-modal').classList.remove('open');
+        }
+
+        function logout() {
+            currentUser = null;
+            const authBtn = document.querySelector('.btn-auth');
+            authBtn.innerHTML = 'Войти';
+            authBtn.onclick = () => openAuthModal('login');
+            closeProfileModal();
+            showToast('Вы успешно вышли из аккаунта. 👋');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            const msgEl = document.getElementById('toast-message');
+            msgEl.innerHTML = message;
+            toast.classList.add('show');
+            
+            if (window.toastTimer) clearTimeout(window.toastTimer);
+            window.toastTimer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        function switchAuthTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.auth-form').forEach(form => form.classList.remove('active'));
+            
+            if (tab === 'login') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('login-form').classList.add('active');
+            } else {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('register-form').classList.add('active');
+            }
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Stop observing once visible to run animation only once
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        document.querySelectorAll('.card, .section-title, .hero-image').forEach((el, index) => {
+            // Slight stagger effect for cards
+            if(el.classList.contains('card')) {
+                el.style.transitionDelay = `${index * 0.1}s`;
+            }
+            observer.observe(el);
+        });
+    </script>
+    <script src="lang.js"></script>
+</body>
+</html>
